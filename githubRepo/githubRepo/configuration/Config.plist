@@ -11,10 +11,12 @@
     <dict>
         <key>Github</key>
         <dict>
+            <key>baseUrl</key>
+            <string>https://github.com/login/oauth/authorize</string>
             <key>consumerKey</key>
-            <string></string>
+            <string>2402103c37bf5256554d</string>
             <key>consumerSecret</key>
-            <string></string>
+            <string>8aa802ff9c6303e52a0fc16e59d3e826ac87e6c1</string>
         </dict>
     </dict>
 </plist>

@@ -15,7 +15,9 @@
 		7CA00C9222E6E38E007501A6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7CA00C9022E6E38E007501A6 /* LaunchScreen.storyboard */; };
 		7CA00C9D22E6E38F007501A6 /* githubRepoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CA00C9C22E6E38F007501A6 /* githubRepoTests.swift */; };
 		7CA00CAC22E6E6A2007501A6 /* GithubLoginService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CA00CAB22E6E6A2007501A6 /* GithubLoginService.swift */; };
-		7CA00CAE22E6EC40007501A6 /* Services.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7CA00CAD22E6EC40007501A6 /* Services.plist */; };
+		7CA00CAE22E6EC40007501A6 /* Config.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7CA00CAD22E6EC40007501A6 /* Config.plist */; };
+		7CA00CB022E6ED10007501A6 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CA00CAF22E6ED10007501A6 /* Config.swift */; };
+		7CA00CB222E725DF007501A6 /* UserRepoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CA00CB122E725DF007501A6 /* UserRepoVC.swift */; };
 		C61AEC3755EC090A955A5583 /* Pods_githubRepoTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F1A363FAB0ABDB0D1921587E /* Pods_githubRepoTests.framework */; };
 		C6C223D4D8E3E8EAB0FAF0B1 /* Pods_githubRepo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7F26D43C6CBF958F6462B6B /* Pods_githubRepo.framework */; };
 /* End PBXBuildFile section */
@@ -44,7 +46,9 @@
 		7CA00C9C22E6E38F007501A6 /* githubRepoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = githubRepoTests.swift; sourceTree = "<group>"; };
 		7CA00C9E22E6E38F007501A6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7CA00CAB22E6E6A2007501A6 /* GithubLoginService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubLoginService.swift; sourceTree = "<group>"; };
-		7CA00CAD22E6EC40007501A6 /* Services.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Services.plist; sourceTree = "<group>"; };
+		7CA00CAD22E6EC40007501A6 /* Config.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Config.plist; sourceTree = "<group>"; };
+		7CA00CAF22E6ED10007501A6 /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
+		7CA00CB122E725DF007501A6 /* UserRepoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRepoVC.swift; sourceTree = "<group>"; };
 		AB072932CBF080EFC7B10534 /* Pods-githubRepoTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-githubRepoTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-githubRepoTests/Pods-githubRepoTests.debug.xcconfig"; sourceTree = "<group>"; };
 		AE44D46D1349693195E391F2 /* Pods-githubRepo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-githubRepo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-githubRepo/Pods-githubRepo.debug.xcconfig"; sourceTree = "<group>"; };
 		E2119DE7B49AECEB35CCFFA3 /* Pods-githubRepo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-githubRepo.release.xcconfig"; path = "Pods/Target Support Files/Pods-githubRepo/Pods-githubRepo.release.xcconfig"; sourceTree = "<group>"; };
@@ -148,7 +152,8 @@
 		7CA00CA822E6E594007501A6 /* configuration */ = {
 			isa = PBXGroup;
 			children = (
-				7CA00CAD22E6EC40007501A6 /* Services.plist */,
+				7CA00CAF22E6ED10007501A6 /* Config.swift */,
+				7CA00CAD22E6EC40007501A6 /* Config.plist */,
 			);
 			path = configuration;
 			sourceTree = "<group>";
@@ -157,6 +162,7 @@
 			isa = PBXGroup;
 			children = (
 				7CA00C8622E6E38B007501A6 /* ViewController.swift */,
+				7CA00CB122E725DF007501A6 /* UserRepoVC.swift */,
 			);
 			path = view;
 			sourceTree = "<group>";
@@ -253,7 +259,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7CA00CAE22E6EC40007501A6 /* Services.plist in Resources */,
+				7CA00CAE22E6EC40007501A6 /* Config.plist in Resources */,
 				7CA00C9222E6E38E007501A6 /* LaunchScreen.storyboard in Resources */,
 				7CA00C8F22E6E38E007501A6 /* Assets.xcassets in Resources */,
 				7CA00C8A22E6E38B007501A6 /* Main.storyboard in Resources */,
@@ -331,10 +337,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7CA00CB022E6ED10007501A6 /* Config.swift in Sources */,
 				7CA00CAC22E6E6A2007501A6 /* GithubLoginService.swift in Sources */,
 				7CA00C8D22E6E38B007501A6 /* githubRepo.xcdatamodeld in Sources */,
 				7CA00C8722E6E38B007501A6 /* ViewController.swift in Sources */,
 				7CA00C8522E6E38B007501A6 /* AppDelegate.swift in Sources */,
+				7CA00CB222E725DF007501A6 /* UserRepoVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -427,7 +435,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -482,7 +490,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -500,6 +508,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = W4HVNQTX75;
 				INFOPLIST_FILE = githubRepo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -507,7 +516,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.farahaniconsulting.githubRepo.githubRepo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -519,6 +528,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = W4HVNQTX75;
 				INFOPLIST_FILE = githubRepo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -526,7 +536,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.farahaniconsulting.githubRepo.githubRepo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

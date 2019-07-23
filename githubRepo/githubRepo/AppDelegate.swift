@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import OAuthSwift
 import CoreData
 
 @UIApplicationMain
@@ -19,7 +20,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         return true
     }
-
+    
+    func application(_ application: UIApplication, open url: URL, sourceApplication: String?, annotation: Any) -> Bool {
+        applicationHandle(url: url)
+        return true
+    }
+    
     func applicationWillResignActive(_ application: UIApplication) {
         // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
         // Use this method to pause ongoing tasks, disable timers, and invalidate graphics rendering callbacks. Games should use this method to pause the game.
@@ -88,6 +94,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             }
         }
     }
+    
+}
 
+extension AppDelegate {
+    
+    func applicationHandle(url: URL) {
+        if (url.host == "eduRepo") {
+            OAuthSwift.handle(url: url)
+        } else {
+            OAuthSwift.handle(url: url)
+        }
+    }
 }
 
