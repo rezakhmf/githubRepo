@@ -16,11 +16,15 @@ struct GithubConfig: Codable {
     let baseURL: String
     let consumerKey: String
     let consumerSecret: String
+    let authorizeUrl: String
+    let accessTokenUrl: String
     
     enum CodingKeys: String, CodingKey {
         case baseURL = "baseUrl"
         case consumerKey = "consumerKey"
         case consumerSecret = "consumerSecret"
+        case authorizeUrl = "authorizeUrl"
+        case accessTokenUrl = "accessTokenUrl"
     }
 }
 

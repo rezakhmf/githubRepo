@@ -10,15 +10,13 @@ import UIKit
 import SafariServices
 import OAuthSwift
 
-class ViewController: OAuthViewController {
+class MainVC: OAuthViewController {
     
     // Dependencies
     let config = Configuration.shared
         
     // properties
     private var oauthswift: OAuth2Swift?
-    var rezaaa = true
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,7 +29,7 @@ class ViewController: OAuthViewController {
     
     private func redirectToGithub() {
         
-         self.oauthswift = OAuth2Swift(consumerKey: config.githubConfig.consumerKey, consumerSecret: config.githubConfig.consumerSecret, authorizeUrl: "https://github.com/login/oauth/authorize", accessTokenUrl: "https://github.com/login/oauth/access_token", responseType: "code")
+         self.oauthswift = OAuth2Swift(consumerKey: config.githubConfig.consumerKey, consumerSecret: config.githubConfig.consumerSecret, authorizeUrl: config.githubConfig.authorizeUrl, accessTokenUrl: config.githubConfig.accessTokenUrl, responseType: "code")
         
         oauthswift?.allowMissingStateCheck = true
         

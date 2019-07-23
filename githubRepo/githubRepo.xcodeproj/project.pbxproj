@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		7CA00C8522E6E38B007501A6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CA00C8422E6E38B007501A6 /* AppDelegate.swift */; };
-		7CA00C8722E6E38B007501A6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CA00C8622E6E38B007501A6 /* ViewController.swift */; };
+		7CA00C8722E6E38B007501A6 /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CA00C8622E6E38B007501A6 /* MainVC.swift */; };
 		7CA00C8A22E6E38B007501A6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7CA00C8822E6E38B007501A6 /* Main.storyboard */; };
 		7CA00C8D22E6E38B007501A6 /* githubRepo.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7CA00C8B22E6E38B007501A6 /* githubRepo.xcdatamodeld */; };
 		7CA00C8F22E6E38E007501A6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7CA00C8E22E6E38E007501A6 /* Assets.xcassets */; };
@@ -36,7 +36,7 @@
 		0CB3F6A4A5E6046B9F241D88 /* Pods-githubRepoTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-githubRepoTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-githubRepoTests/Pods-githubRepoTests.release.xcconfig"; sourceTree = "<group>"; };
 		7CA00C8122E6E38B007501A6 /* githubRepo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = githubRepo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7CA00C8422E6E38B007501A6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		7CA00C8622E6E38B007501A6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		7CA00C8622E6E38B007501A6 /* MainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
 		7CA00C8922E6E38B007501A6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		7CA00C8C22E6E38B007501A6 /* githubRepo.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = githubRepo.xcdatamodel; sourceTree = "<group>"; };
 		7CA00C8E22E6E38E007501A6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -161,7 +161,7 @@
 		7CA00CA922E6E5AC007501A6 /* view */ = {
 			isa = PBXGroup;
 			children = (
-				7CA00C8622E6E38B007501A6 /* ViewController.swift */,
+				7CA00C8622E6E38B007501A6 /* MainVC.swift */,
 				7CA00CB122E725DF007501A6 /* UserRepoVC.swift */,
 			);
 			path = view;
@@ -340,7 +340,7 @@
 				7CA00CB022E6ED10007501A6 /* Config.swift in Sources */,
 				7CA00CAC22E6E6A2007501A6 /* GithubLoginService.swift in Sources */,
 				7CA00C8D22E6E38B007501A6 /* githubRepo.xcdatamodeld in Sources */,
-				7CA00C8722E6E38B007501A6 /* ViewController.swift in Sources */,
+				7CA00C8722E6E38B007501A6 /* MainVC.swift in Sources */,
 				7CA00C8522E6E38B007501A6 /* AppDelegate.swift in Sources */,
 				7CA00CB222E725DF007501A6 /* UserRepoVC.swift in Sources */,
 			);

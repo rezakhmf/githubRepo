@@ -17,6 +17,11 @@
             <string>2402103c37bf5256554d</string>
             <key>consumerSecret</key>
             <string>8aa802ff9c6303e52a0fc16e59d3e826ac87e6c1</string>
+            <key>authorizeUrl</key>
+            <string>https://github.com/login/oauth/authorize</string>
+            <key>accessTokenUrl</key>
+            <string>https://github.com/login/oauth/access_token</string>
+
         </dict>
     </dict>
 </plist>
