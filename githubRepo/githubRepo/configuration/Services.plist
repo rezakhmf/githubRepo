@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<!--
+   Services.plist
+   githubRepo
+
+   Created by Qantas Dev on 23/7/19.
+   Copyright (c) 2019 Farahani Consulting. All rights reserved.
+-->
+<plist version="1.0">
+    <dict>
+        <key>Github</key>
+        <dict>
+            <key>consumerKey</key>
+            <string></string>
+            <key>consumerSecret</key>
+            <string></string>
+        </dict>
+    </dict>
+</plist>
