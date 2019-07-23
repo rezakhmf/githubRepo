@@ -12,7 +12,7 @@
         <!--MainVC-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="MainVC" customModule="githubRepo" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MainVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BYZ-38-t0r" customClass="MainVC" customModule="githubRepo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -57,25 +57,32 @@
         <!--User RepoVC-->
         <scene sceneID="9pk-5t-4i0">
             <objects>
-                <viewController id="ro0-Ce-HLg" customClass="UserRepoVC" customModule="githubRepo" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="UserRepoVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="ro0-Ce-HLg" customClass="UserRepoVC" customModule="githubRepo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="4hp-Xc-K0z">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uVB-va-U6U">
-                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
-                                <state key="normal" title="hiiii"/>
-                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q2g-4g-AxR">
+                                <rect key="frame" x="64" y="108" width="334" height="48"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="48" id="shl-ty-zdH"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="Xft-Li-2In" firstAttribute="bottom" secondItem="uVB-va-U6U" secondAttribute="bottom" id="0i5-aN-qNZ"/>
-                            <constraint firstItem="Xft-Li-2In" firstAttribute="trailing" secondItem="uVB-va-U6U" secondAttribute="trailing" id="etB-Oe-eiI"/>
-                            <constraint firstItem="uVB-va-U6U" firstAttribute="leading" secondItem="Xft-Li-2In" secondAttribute="leading" id="iZq-LW-99h"/>
-                            <constraint firstItem="uVB-va-U6U" firstAttribute="top" secondItem="Xft-Li-2In" secondAttribute="top" id="o2z-SL-HNU"/>
+                            <constraint firstItem="Q2g-4g-AxR" firstAttribute="leading" secondItem="Xft-Li-2In" secondAttribute="leading" constant="64" id="L1N-qU-GSX"/>
+                            <constraint firstItem="Xft-Li-2In" firstAttribute="trailing" secondItem="Q2g-4g-AxR" secondAttribute="trailing" constant="16" id="Osm-zs-zke"/>
+                            <constraint firstItem="Q2g-4g-AxR" firstAttribute="top" secondItem="Xft-Li-2In" secondAttribute="top" constant="64" id="taL-Pg-CbQ"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Xft-Li-2In"/>
                     </view>
+                    <connections>
+                        <outlet property="repoOwnerLabel" destination="Q2g-4g-AxR" id="gBK-2j-A7L"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZC2-UM-wJr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

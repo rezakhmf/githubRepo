@@ -7,11 +7,22 @@
 //
 
 import UIKit
+import SwiftKeychainWrapper
 
 class UserRepoVC: UIViewController {
-
+    
+    
+    
+    @IBOutlet weak var repoOwnerLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let reteritveString: String? = KeychainWrapper.standard.string(forKey: "access_token")
+        
+        print(reteritveString)
+        
+        repoOwnerLabel.text = reteritveString ?? ""
 
         // Do any additional setup after loading the view.
     }

@@ -1,16 +1,20 @@
 PODS:
   - OAuthSwift (2.0.0)
+  - SwiftKeychainWrapper (3.4.0)
 
 DEPENDENCIES:
   - OAuthSwift (~> 2.0.0)
+  - SwiftKeychainWrapper (~> 3.4)
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - OAuthSwift
+    - SwiftKeychainWrapper
 
 SPEC CHECKSUMS:
   OAuthSwift: 6805456763cf1c7ae0c16765257ed430b7aacae7
+  SwiftKeychainWrapper: 6fc49fbf7d4a6b0772917acb0e53a1639f6078d6
 
-PODFILE CHECKSUM: fdd383a1f1578bf98aca1d27c609956159333dd2
+PODFILE CHECKSUM: 7a8bba412332de63bf01e94b63baa89bec6d212c
 
 COCOAPODS: 1.5.3

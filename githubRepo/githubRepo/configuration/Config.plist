@@ -21,6 +21,8 @@
             <string>https://github.com/login/oauth/authorize</string>
             <key>accessTokenUrl</key>
             <string>https://github.com/login/oauth/access_token</string>
+            <key>callBackURL</key>
+            <string>eduRepo://oauth2Callback</string>
 
         </dict>
     </dict>

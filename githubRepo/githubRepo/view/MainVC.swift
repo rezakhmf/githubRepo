@@ -9,6 +9,7 @@
 import UIKit
 import SafariServices
 import OAuthSwift
+import SwiftKeychainWrapper
 
 class MainVC: OAuthViewController {
     
@@ -25,6 +26,8 @@ class MainVC: OAuthViewController {
     
     @IBAction func loginDidTap(_ sender: Any) {
         redirectToGithub()
+        
+        //
     }
     
     private func redirectToGithub() {
@@ -35,12 +38,18 @@ class MainVC: OAuthViewController {
         
         oauthswift?.authorizeURLHandler = SafariURLHandler(viewController: self, oauthSwift: oauthswift!)
         
-        guard let url = URL(string: "eduRepo://oauth2Callback") else { return }
+        guard let url = URL(string: config.githubConfig.callBackURL) else { return }
         
         oauthswift?.authorize(withCallbackURL: url, scope: "user,repo", state: "") { result in
             switch result {
             case .success(let (_, _, params)):
-                print(params)
+                if let token = params["access_token"] as? String {
+                    let _ = KeychainWrapper.standard.set(token, forKey: "access_token", withAccessibility: .afterFirstUnlock)
+                    let storyboard = UIStoryboard(name: "Main", bundle: nil)
+                    let controller = storyboard.instantiateViewController(withIdentifier: "UserRepoVC")
+                    self.present(controller, animated: true, completion: nil)
+                }
+                
             case .failure(let error):
                 print(error)
             }
