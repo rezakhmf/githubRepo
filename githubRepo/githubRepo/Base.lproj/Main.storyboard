@@ -63,7 +63,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="is loading..." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q2g-4g-AxR">
-                                <rect key="frame" x="64" y="108" width="334" height="48"/>
+                                <rect key="frame" x="16" y="108" width="382" height="48"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="48" id="shl-ty-zdH"/>
                                 </constraints>
@@ -71,17 +71,28 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="IOr-rv-WxV">
+                                <rect key="frame" x="0.0" y="220" width="414" height="400"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="400" id="Bbx-ZQ-gOK"/>
+                                </constraints>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="Q2g-4g-AxR" firstAttribute="leading" secondItem="Xft-Li-2In" secondAttribute="leading" constant="64" id="L1N-qU-GSX"/>
+                            <constraint firstItem="IOr-rv-WxV" firstAttribute="top" secondItem="Q2g-4g-AxR" secondAttribute="bottom" constant="64" id="47s-gp-f7O"/>
+                            <constraint firstItem="Q2g-4g-AxR" firstAttribute="leading" secondItem="Xft-Li-2In" secondAttribute="leading" constant="16" id="L1N-qU-GSX"/>
                             <constraint firstItem="Xft-Li-2In" firstAttribute="trailing" secondItem="Q2g-4g-AxR" secondAttribute="trailing" constant="16" id="Osm-zs-zke"/>
+                            <constraint firstItem="IOr-rv-WxV" firstAttribute="leading" secondItem="Xft-Li-2In" secondAttribute="leading" id="qDO-Iv-Yrr"/>
                             <constraint firstItem="Q2g-4g-AxR" firstAttribute="top" secondItem="Xft-Li-2In" secondAttribute="top" constant="64" id="taL-Pg-CbQ"/>
+                            <constraint firstItem="IOr-rv-WxV" firstAttribute="width" secondItem="Xft-Li-2In" secondAttribute="width" id="wN3-gb-3l6"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Xft-Li-2In"/>
                     </view>
                     <connections>
                         <outlet property="repoOwnerLabel" destination="Q2g-4g-AxR" id="gBK-2j-A7L"/>
+                        <outlet property="repoTableView" destination="IOr-rv-WxV" id="A3m-hI-qHi"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZC2-UM-wJr" userLabel="First Responder" sceneMemberID="firstResponder"/>

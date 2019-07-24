@@ -9,9 +9,11 @@
 import UIKit
 import SwiftKeychainWrapper
 
-class UserRepoVC: UIViewController {
+class UserRepoVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     @IBOutlet weak var repoOwnerLabel: UILabel!
+    
+    @IBOutlet weak var repoTableView: UITableView!
     
     // MARK: - Parameteres
     var githubViewModel: GithubViewModel?
@@ -23,7 +25,7 @@ class UserRepoVC: UIViewController {
     }
     public var repos: Repos = [] {
         didSet {
-           
+           repoTableView.reloadData()
         }
     }
 
@@ -31,6 +33,8 @@ class UserRepoVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.repoTableView.dataSource = self
+        self.repoTableView.delegate = self
         
         self.githubViewModel = GithubViewModel()
         
@@ -48,5 +52,18 @@ class UserRepoVC: UIViewController {
             self.userRepo = userName
         }
         
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return repos.count
+    }
+    
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = Bundle.main.loadNibNamed("RepoCell", owner: self, options: nil)?.first as! RepoCell
+        
+        cell.textLabel?.text = repos[indexPath.row].name
+        
+        return cell
     }
 }
