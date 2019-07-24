@@ -16,6 +16,11 @@ class UserRepoVC: UIViewController {
     // MARK: - Parameteres
     var githubViewModel: GithubViewModel?
     
+    public var userRepo: String = "" {
+        didSet {
+           repoOwnerLabel.text = self.userRepo
+        }
+    }
     public var repos: Repos = [] {
         didSet {
            
@@ -26,17 +31,22 @@ class UserRepoVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let reteritveString: String? = KeychainWrapper.standard.string(forKey: "access_token")
-        
-        repoOwnerLabel.text = reteritveString ?? ""
         
         self.githubViewModel = GithubViewModel()
         
         self.githubViewModel?.fetchRepo { repos in
-            print(repos)
+            //print(repos)
             self.repos = repos
         }
         
+        
+        self.githubViewModel?.fetchUserRepoInfo { userInfo in
+            print(userInfo)
+            guard let userName = userInfo.name else {
+             return
+            }
+            self.userRepo = userName
+        }
         
     }
 }

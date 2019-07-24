@@ -25,6 +25,8 @@
             <string>eduRepo://oauth2Callback</string>
             <key>repoUrl</key>
             <string>https://api.github.com/user/repos</string>
+            <key>repoUserUrl</key>
+            <string>https://api.github.com/user</string>
         </dict>
     </dict>
 </plist>

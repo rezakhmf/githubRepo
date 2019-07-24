@@ -20,6 +20,7 @@ struct GithubConfig: Codable {
     let accessTokenUrl: String
     let callBackURL: String
     let repoUrl: String
+    let repoUserUrl: String
     
     enum CodingKeys: String, CodingKey {
         case baseURL = "baseUrl"
@@ -29,6 +30,7 @@ struct GithubConfig: Codable {
         case accessTokenUrl = "accessTokenUrl"
         case callBackURL = "callBackURL"
         case repoUrl = "repoUrl"
+        case repoUserUrl = "repoUserUrl"
     }
 }
 
