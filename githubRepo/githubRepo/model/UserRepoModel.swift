@@ -2,7 +2,7 @@
 //  UserRepoModel.swift
 //  githubRepo
 //
-//  Created by Qantas Dev on 24/7/19.
+//  Created by Reza Farahani on 24/7/19.
 //  Copyright © 2019 Farahani Consulting. All rights reserved.
 //
 
