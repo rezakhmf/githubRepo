@@ -20,6 +20,11 @@
 		7CA00CB222E725DF007501A6 /* UserRepoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CA00CB122E725DF007501A6 /* UserRepoVC.swift */; };
 		7CA00CB422E7428C007501A6 /* RepoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CA00CB322E7428C007501A6 /* RepoModel.swift */; };
 		7CA00CB822E7470C007501A6 /* RepoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7CA00CB722E7470C007501A6 /* RepoCell.xib */; };
+		7CA00CC022E7DE72007501A6 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CA00CBC22E7DE72007501A6 /* NetworkError.swift */; };
+		7CA00CC122E7DE72007501A6 /* HTTPRequestType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CA00CBD22E7DE72007501A6 /* HTTPRequestType.swift */; };
+		7CA00CC222E7DE72007501A6 /* NetworkHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CA00CBE22E7DE72007501A6 /* NetworkHelpers.swift */; };
+		7CA00CC322E7DE72007501A6 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CA00CBF22E7DE72007501A6 /* NetworkService.swift */; };
+		7CA00CC522E7DEA2007501A6 /* RepoServiceProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CA00CC422E7DEA2007501A6 /* RepoServiceProvider.swift */; };
 		C61AEC3755EC090A955A5583 /* Pods_githubRepoTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F1A363FAB0ABDB0D1921587E /* Pods_githubRepoTests.framework */; };
 		C6C223D4D8E3E8EAB0FAF0B1 /* Pods_githubRepo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7F26D43C6CBF958F6462B6B /* Pods_githubRepo.framework */; };
 /* End PBXBuildFile section */
@@ -53,6 +58,11 @@
 		7CA00CB122E725DF007501A6 /* UserRepoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRepoVC.swift; sourceTree = "<group>"; };
 		7CA00CB322E7428C007501A6 /* RepoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoModel.swift; sourceTree = "<group>"; };
 		7CA00CB722E7470C007501A6 /* RepoCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RepoCell.xib; sourceTree = "<group>"; };
+		7CA00CBC22E7DE72007501A6 /* NetworkError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
+		7CA00CBD22E7DE72007501A6 /* HTTPRequestType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPRequestType.swift; sourceTree = "<group>"; };
+		7CA00CBE22E7DE72007501A6 /* NetworkHelpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkHelpers.swift; sourceTree = "<group>"; };
+		7CA00CBF22E7DE72007501A6 /* NetworkService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		7CA00CC422E7DEA2007501A6 /* RepoServiceProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoServiceProvider.swift; sourceTree = "<group>"; };
 		AB072932CBF080EFC7B10534 /* Pods-githubRepoTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-githubRepoTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-githubRepoTests/Pods-githubRepoTests.debug.xcconfig"; sourceTree = "<group>"; };
 		AE44D46D1349693195E391F2 /* Pods-githubRepo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-githubRepo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-githubRepo/Pods-githubRepo.debug.xcconfig"; sourceTree = "<group>"; };
 		E2119DE7B49AECEB35CCFFA3 /* Pods-githubRepo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-githubRepo.release.xcconfig"; path = "Pods/Target Support Files/Pods-githubRepo/Pods-githubRepo.release.xcconfig"; sourceTree = "<group>"; };
@@ -127,6 +137,7 @@
 				7CA00CAA22E6E5B8007501A6 /* viewmodel */,
 				7CA00CA922E6E5AC007501A6 /* view */,
 				7CA00CA822E6E594007501A6 /* configuration */,
+				7CA00CBA22E7DE08007501A6 /* repository */,
 				7CA00C8422E6E38B007501A6 /* AppDelegate.swift */,
 				7CA00C8822E6E38B007501A6 /* Main.storyboard */,
 				7CA00C8E22E6E38E007501A6 /* Assets.xcassets */,
@@ -150,6 +161,7 @@
 			isa = PBXGroup;
 			children = (
 				7CA00CB322E7428C007501A6 /* RepoModel.swift */,
+				7CA00CC422E7DEA2007501A6 /* RepoServiceProvider.swift */,
 			);
 			path = model;
 			sourceTree = "<group>";
@@ -166,6 +178,7 @@
 		7CA00CA922E6E5AC007501A6 /* view */ = {
 			isa = PBXGroup;
 			children = (
+				7CA00CB922E7DDB7007501A6 /* repository */,
 				7CA00C8622E6E38B007501A6 /* MainVC.swift */,
 				7CA00CB122E725DF007501A6 /* UserRepoVC.swift */,
 				7CA00CB722E7470C007501A6 /* RepoCell.xib */,
@@ -179,6 +192,32 @@
 				7CA00CAB22E6E6A2007501A6 /* GithubLoginService.swift */,
 			);
 			path = viewmodel;
+			sourceTree = "<group>";
+		};
+		7CA00CB922E7DDB7007501A6 /* repository */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = repository;
+			sourceTree = "<group>";
+		};
+		7CA00CBA22E7DE08007501A6 /* repository */ = {
+			isa = PBXGroup;
+			children = (
+				7CA00CBB22E7DE39007501A6 /* network */,
+			);
+			path = repository;
+			sourceTree = "<group>";
+		};
+		7CA00CBB22E7DE39007501A6 /* network */ = {
+			isa = PBXGroup;
+			children = (
+				7CA00CBD22E7DE72007501A6 /* HTTPRequestType.swift */,
+				7CA00CBC22E7DE72007501A6 /* NetworkError.swift */,
+				7CA00CBE22E7DE72007501A6 /* NetworkHelpers.swift */,
+				7CA00CBF22E7DE72007501A6 /* NetworkService.swift */,
+			);
+			path = network;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -346,12 +385,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7CA00CC322E7DE72007501A6 /* NetworkService.swift in Sources */,
 				7CA00CB022E6ED10007501A6 /* Config.swift in Sources */,
+				7CA00CC522E7DEA2007501A6 /* RepoServiceProvider.swift in Sources */,
+				7CA00CC022E7DE72007501A6 /* NetworkError.swift in Sources */,
 				7CA00CB422E7428C007501A6 /* RepoModel.swift in Sources */,
 				7CA00CAC22E6E6A2007501A6 /* GithubLoginService.swift in Sources */,
 				7CA00C8D22E6E38B007501A6 /* githubRepo.xcdatamodeld in Sources */,
+				7CA00CC122E7DE72007501A6 /* HTTPRequestType.swift in Sources */,
 				7CA00C8722E6E38B007501A6 /* MainVC.swift in Sources */,
 				7CA00C8522E6E38B007501A6 /* AppDelegate.swift in Sources */,
+				7CA00CC222E7DE72007501A6 /* NetworkHelpers.swift in Sources */,
 				7CA00CB222E725DF007501A6 /* UserRepoVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -9,26 +9,31 @@
 import Foundation
 import OAuthSwift
 
-protocol GithubLoginProvder {
-    func redirect(github url: String)
+protocol GithubViewModelProvider {
+    func fetchRepo(completion: @escaping (Repos) -> Void)
 }
 
-//public class GithubLoginService: GithubLoginProvder {
-//    
-//    // Dependencies
-//    
-//    let config = Configuration.shared
-//    
-//    func redirect(github url: String) {
-//        
-//        let oauthswift = OAuth2Swift(consumerKey: config.githubConfig.consumerKey, consumerSecret: config.githubConfig.consumerSecret, authorizeUrl: "https://github.com/login/oauth/authorize", accessTokenUrl: "https://github.com/login/oauth/access_token", responseType: "code")
-//        
-//        oauthswift.allowMissingStateCheck = true
-//        
-//        oauthswift.authorizeURLHandler = SafariURLHandler(viewController: self, oauthSwift: oauthswift)
-//        
-//    }
-//    
-//
-//    
-//}
+public class GithubViewModel: GithubViewModelProvider {
+    
+    // MARK: - Dependencies
+    private let reposeService: RepoServiceProvider = ReposeService.shared
+    
+    
+    func fetchRepo(completion: @escaping (Repos) -> Void) {
+        
+        reposeService.fetchRepos { repos in
+            switch repos {
+            case .failure(let error): 
+                print(error.description)
+            case .success(let reposResponse):
+                completion(reposResponse)
+            }
+        }
+    }
+    
+    
+}
+
+
+
+

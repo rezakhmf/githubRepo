@@ -23,7 +23,8 @@
             <string>https://github.com/login/oauth/access_token</string>
             <key>callBackURL</key>
             <string>eduRepo://oauth2Callback</string>
-
+            <key>repoUrl</key>
+            <string>https://api.github.com/user/repos</string>
         </dict>
     </dict>
 </plist>

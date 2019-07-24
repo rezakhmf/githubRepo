@@ -1,0 +1,22 @@
+//
+//  NetworkHelpers.swift
+//  iAuCurrency
+//
+//  Created by Reza Farahani on 24/7/19.
+//
+//
+
+import Foundation
+
+public typealias JSON = [String: Any]
+
+extension URLRequest {
+    
+    mutating func addHeaders(headers: HTTPHeaders?) {
+        guard let headers = headers, !headers.isEmpty else { return }
+        for (key, header) in headers {
+            self.addValue(header, forHTTPHeaderField: key)
+        }
+    }
+    
+}
